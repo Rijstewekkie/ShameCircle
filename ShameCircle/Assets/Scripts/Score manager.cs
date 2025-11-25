@@ -7,13 +7,13 @@ public class Scoremanager : MonoBehaviour
     public static int SScore;
     void Start()
     {
-        if (SScoreInstance != this)
+        if (SScoreInstance == null)
         {
-            Destroy(this);
+            SScoreInstance = this;
         }        
         else
         {
-            SScoreInstance = this;
+            Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
     }
