@@ -127,7 +127,7 @@ public class DrawBoxController : MonoBehaviour
         
         //Mix de canvas en "echte" wereld
         Vector3 screenCenter = new Vector3(boxCenter.x, boxCenter.y, collisionCubeDepth);
-        Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
+        Vector3 worldCenter = screenshotCamera.ScreenToWorldPoint(screenCenter);
         activeCollisionCube.transform.position = worldCenter;
 
         //Scherm groote bs
@@ -135,8 +135,8 @@ public class DrawBoxController : MonoBehaviour
         Vector3 screenRight = new Vector3(boxMaxX, boxCenter.y, collisionCubeDepth);
 
         float worldWidth = Vector3.Distance(
-            Camera.main.ScreenToWorldPoint(screenLeft),
-            Camera.main.ScreenToWorldPoint(screenRight)
+            screenshotCamera.ScreenToWorldPoint(screenLeft),
+            screenshotCamera.ScreenToWorldPoint(screenRight)
         );
 
         //Meer scherm groote bs
@@ -144,8 +144,8 @@ public class DrawBoxController : MonoBehaviour
         Vector3 screenTop    = new Vector3(boxCenter.x, boxMaxY, collisionCubeDepth);
 
         float worldHeight = Vector3.Distance(
-            Camera.main.ScreenToWorldPoint(screenBottom),
-            Camera.main.ScreenToWorldPoint(screenTop)
+            screenshotCamera.ScreenToWorldPoint(screenBottom),
+            screenshotCamera.ScreenToWorldPoint(screenTop)
         );
 
         //Placement (Daan, raak gras aan <3)
