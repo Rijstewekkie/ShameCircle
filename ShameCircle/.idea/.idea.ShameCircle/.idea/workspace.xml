@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0b46e06c-3b1d-4a86-b921-bc5387f666f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Picture Maken.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Picture Maken.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TouchCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TouchCube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TouchImage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TouchImage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BirdCheckBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BirdCheckBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score manager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score manager.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +111,10 @@
       <workItem from="1763551145563" duration="6671000" />
       <workItem from="1763634454879" duration="11011000" />
       <workItem from="1763681994962" duration="1640000" />
-      <workItem from="1763726436201" duration="1800000" />
+      <workItem from="1763726436201" duration="3073000" />
+      <workItem from="1763734262924" duration="2798000" />
+      <workItem from="1763973833219" duration="1020000" />
+      <workItem from="1763976357133" duration="4497000" />
     </task>
     <servers />
   </component>

@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class BirdCheckBox : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private string BirdName;
+    
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.GetComponent<BirdIdentityHolder>() != null)
+        {
+            BirdIdentityHolder BirdIdentity = other.GetComponent<BirdIdentityHolder>();
+            BirdName = BirdIdentity.BirdType.ToString();
+            BirdSelected();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void BirdSelected()
     {
+        Debug.Log(BirdName);
         
     }
 }

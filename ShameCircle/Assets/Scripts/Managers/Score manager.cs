@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class Scoremanager : MonoBehaviour
 {
-    public static Scoremanager SScoreInstance;
+    public static Scoremanager SScoreManager;
     
     public static int SScore;
     void Start()
     {
-        if (SScoreInstance != this)
+        if (SScoreManager != this)
         {
             Destroy(this);
         }        
         else
         {
-            SScoreInstance = this;
+            SScoreManager = this;
         }
         DontDestroyOnLoad(this.gameObject);
     }
