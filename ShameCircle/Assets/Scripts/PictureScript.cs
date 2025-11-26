@@ -149,7 +149,7 @@ public class DrawBoxController : MonoBehaviour
         );
 
         //Placement (Daan, raak gras aan <3)
-        activeCollisionCube.transform.localScale = new Vector3(worldWidth, worldHeight, 100f);
+        activeCollisionCube.transform.localScale = new Vector3(worldWidth, worldHeight, 500f);
     }
 
     void ResetBoxCoords()

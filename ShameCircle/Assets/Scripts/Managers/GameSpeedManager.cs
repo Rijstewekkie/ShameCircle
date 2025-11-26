@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class GameSpeedManager : MonoBehaviour
 {
-    private float GameSpeed; //actuale speed
+    public static float SGameSpeed; //actuale speed
     public static float SSpeedToApply; //speed storage
     public static bool sPauzeGame;
+    public static bool sLevelBeat;
     
-    private PauzeManager pauzeManager;
+    private UIManager uiManager;
     
     public static GameSpeedManager SSpeedManager;
     void Start()
     {
-        pauzeManager = gameObject.GetComponent<PauzeManager>();
+        uiManager = gameObject.GetComponent<UIManager>();
         
         if (SSpeedManager != this)
         {
@@ -22,5 +23,28 @@ public class GameSpeedManager : MonoBehaviour
             SSpeedManager = this;
         }
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Update()
+    {
+        if (sLevelBeat & sPauzeGame)
+        {
+            sPauzeGame = false;
+        }
+
+        if (sPauzeGame)
+        {
+            SGameSpeed = 0;
+        }
+
+        else if (sLevelBeat)
+        {
+            SGameSpeed = 0.25f;
+        }
+
+        else
+        {
+            SGameSpeed = SSpeedToApply;
+        }
     }
 }

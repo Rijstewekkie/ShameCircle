@@ -3,20 +3,29 @@ using UnityEngine;
 public class BirdCheckBox : MonoBehaviour
 {
     private string BirdName;
+    private BirdIdentityHolder bird;
+    
+    private GameManager gameManager;
+
+    void Awake()
+    {
+        gameManager = GameObject.Find("ManagerManager").GetComponent<GameManager>();
+    }
     
     void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<BirdIdentityHolder>() != null)
         {
-            BirdIdentityHolder BirdIdentity = other.GetComponent<BirdIdentityHolder>();
-            BirdName = BirdIdentity.BirdType.ToString();
+            bird = other.GetComponent<BirdIdentityHolder>();
+            BirdName = bird.BirdType.ToString();
             BirdSelected();
         }
     }
 
     void BirdSelected()
     {
-        Debug.Log(BirdName);
-        
+        gameManager.SelectedBirdName = BirdName;
+        gameManager.SelectedBird = bird;
+        gameManager.BirdCaught();
     }
 }
