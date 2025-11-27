@@ -63,9 +63,9 @@ public class Birdmovement : MonoBehaviour
     void CheckRespawn()
     {
         // teleport terug links als te ver rechts
-        if (transform.position.x > 50f)
+        if (transform.position.x > 100f)
         {
-            transform.position = new Vector3(-50f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-100f, transform.position.y, transform.position.z);
             targetPos = transform.position + new Vector3(5, 0, 0);
         }
     }
