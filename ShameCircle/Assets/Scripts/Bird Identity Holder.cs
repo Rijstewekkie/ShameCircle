@@ -18,6 +18,7 @@ public class BirdIdentityHolder : MonoBehaviour
     
     [SerializeField] public BirdTypes BirdType;
 
+    [SerializeField] public bool Imposter;
     void Start()
     {
         if (BirdType == BirdTypes.NULL)
