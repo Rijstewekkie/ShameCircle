@@ -6,7 +6,7 @@ public class Birdmovement : MonoBehaviour
     public float Movespeed = 4f;            
     public float Maxturnspeed = 2f;         
     public float Glidechance = 0.2f;        
-    public float Vertical = 0.5f;      
+         
     public float Horizontal = 0.5f;    
     public float Coursechangeinterval = 3f; 
 
@@ -36,7 +36,7 @@ public class Birdmovement : MonoBehaviour
             nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
             gliding = Random.value < Glidechance;
 
-            float randomY = Random.Range(-Vertical, Vertical);
+            float randomY = Random.Range(-8, 8);
             float randomX = Random.Range(0f, Horizontal);
 
             targetPos += new Vector3(5f + randomX, randomY, 0f);
@@ -63,9 +63,9 @@ public class Birdmovement : MonoBehaviour
     void CheckRespawn()
     {
         // teleport terug links als te ver rechts
-        if (transform.position.x > 50f)
+        if (transform.position.x > 55f)
         {
-            transform.position = new Vector3(-50f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-55f, Random.Range(-12,15), 26);
             targetPos = transform.position + new Vector3(5, 0, 0);
         }
     }
