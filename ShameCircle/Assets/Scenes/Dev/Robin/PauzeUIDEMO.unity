@@ -711,6 +711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: In game UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3813632747780693201, guid: 0021fef9faca4274d83b475be6e1e986, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4911319045434796966, guid: 0021fef9faca4274d83b475be6e1e986, type: 3}
       propertyPath: m_RenderMode
       value: 0

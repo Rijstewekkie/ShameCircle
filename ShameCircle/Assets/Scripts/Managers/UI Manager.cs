@@ -1,19 +1,19 @@
 using UnityEngine;
 
-public class PauzeManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    public static PauzeManager SPauseManager;
+    public static UIManager SUIManager;
     
     public bool PauzeActive;
     void Start()
     {
-        if (SPauseManager != this)
+        if (SUIManager != this)
         {
             Destroy(this);
         }        
         else
         {
-            SPauseManager = this;
+            SUIManager = this;
         }
         DontDestroyOnLoad(this.gameObject);
     }
