@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b46e06c-3b1d-4a86-b921-bc5387f666f0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multi-Camera Asset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multi-Camera Asset.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TouchImage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TouchImage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BirdSpotScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BirdSpotScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin/BirdSelectorDEMO.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin/BirdSelectorDEMO.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelBeat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelBeat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Score manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Score manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PictureScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PictureScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +122,8 @@
       <workItem from="1763973833219" duration="1020000" />
       <workItem from="1763976357133" duration="4497000" />
       <workItem from="1764156915601" duration="11171000" />
+      <workItem from="1764245892445" duration="4396000" />
+      <workItem from="1764330700216" duration="10580000" />
     </task>
     <servers />
   </component>

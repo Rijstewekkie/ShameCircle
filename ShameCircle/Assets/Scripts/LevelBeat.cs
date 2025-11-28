@@ -16,7 +16,9 @@ public class LevelBeatScript : MonoBehaviour
     {
         if (LevelBeat)
         {
+            Debug.Log("Level Beat");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            LevelBeat = false;
         }
     }
 }

@@ -18,6 +18,8 @@ public class BirdIdentityHolder : MonoBehaviour
     
     [SerializeField] public BirdTypes BirdType;
 
+    [SerializeField] public bool Flying;
+    
     [SerializeField] public bool Imposter;
     void Start()
     {

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 339501100739420778}
   - component: {fileID: 527420040419085512}
-  - component: {fileID: 5308117329525173755}
   m_Layer: 0
   m_Name: Bird Camera 5
   m_TagString: MainCamera
@@ -84,14 +83,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5308117329525173755
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363310680009828720}
-  m_Enabled: 1
 --- !u!1 &1494653723464434678
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +93,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5122069511843302045}
   - component: {fileID: 3206654204172483287}
-  - component: {fileID: 4266539370407029930}
   m_Layer: 0
   m_Name: Bird Camera 3
   m_TagString: MainCamera
@@ -176,14 +166,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4266539370407029930
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494653723464434678}
-  m_Enabled: 1
 --- !u!1 &2354850719619356785
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +176,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4563708978943995709}
   - component: {fileID: 6101251491928296083}
-  - component: {fileID: 7393500547685148730}
   m_Layer: 0
   m_Name: Bird Camera 2
   m_TagString: MainCamera
@@ -268,14 +249,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7393500547685148730
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2354850719619356785}
-  m_Enabled: 1
 --- !u!1 &4691409822529907543
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +259,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1314270213565936699}
   - component: {fileID: 6492405230369736431}
-  - component: {fileID: 6708956651141627827}
   m_Layer: 0
   m_Name: Bird Camera 4
   m_TagString: MainCamera
@@ -360,14 +332,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6708956651141627827
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4691409822529907543}
-  m_Enabled: 1
 --- !u!1 &4703869023430592632
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8557072040481792916}
   - component: {fileID: 7419453896334087}
-  - component: {fileID: 5316185137933265944}
   m_Layer: 0
   m_Name: Decor Camera 1
   m_TagString: Untagged
@@ -452,14 +415,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5316185137933265944
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4703869023430592632}
-  m_Enabled: 1
 --- !u!1 &4829483788417042331
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +425,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8971521234071314627}
   - component: {fileID: 1618569947677506112}
-  - component: {fileID: 4790935749291640282}
   m_Layer: 0
   m_Name: Decor Camera 4
   m_TagString: Untagged
@@ -544,14 +498,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4790935749291640282
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4829483788417042331}
-  m_Enabled: 1
 --- !u!1 &4942373524975683934
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +508,6 @@ GameObject:
   m_Component:
   - component: {fileID: 810955582832256967}
   - component: {fileID: 2379758447627327156}
-  - component: {fileID: 1869923332040243642}
   m_Layer: 0
   m_Name: Foreground
   m_TagString: Untagged
@@ -636,14 +581,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1869923332040243642
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942373524975683934}
-  m_Enabled: 1
 --- !u!1 &6103064653532518688
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +591,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4200551921311242492}
   - component: {fileID: 5559047816166846804}
-  - component: {fileID: 4935734643524595786}
   m_Layer: 0
   m_Name: Decor Camera 2
   m_TagString: Untagged
@@ -728,14 +664,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4935734643524595786
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6103064653532518688}
-  m_Enabled: 1
 --- !u!1 &6604359344647774934
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1327669308435695135}
+  - component: {fileID: 2212069749231586997}
   m_Layer: 0
   m_Name: Multi-Camera Asset
   m_TagString: Untagged
@@ -779,6 +708,14 @@ Transform:
   - {fileID: 1841445970061357587}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &2212069749231586997
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6604359344647774934}
+  m_Enabled: 1
 --- !u!1 &7278944906865065463
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +726,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5882337471644820409}
   - component: {fileID: 8292365207280535208}
-  - component: {fileID: 6644001087791255005}
   m_Layer: 0
   m_Name: Decor Camera 5
   m_TagString: Untagged
@@ -863,14 +799,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6644001087791255005
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7278944906865065463}
-  m_Enabled: 1
 --- !u!1 &7309017703532573795
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +809,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1841445970061357587}
   - component: {fileID: 7326949745652238211}
-  - component: {fileID: 2617149660355400012}
   m_Layer: 0
   m_Name: 'Background '
   m_TagString: Untagged
@@ -955,14 +882,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2617149660355400012
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309017703532573795}
-  m_Enabled: 1
 --- !u!1 &7485596939386536168
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +892,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1339223536380608369}
   - component: {fileID: 1021281990165931554}
-  - component: {fileID: 2519197969271470956}
   m_Layer: 0
   m_Name: Decor Camera 3
   m_TagString: Untagged
@@ -1047,14 +965,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2519197969271470956
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7485596939386536168}
-  m_Enabled: 1
 --- !u!1 &7973601594731740529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +975,6 @@ GameObject:
   m_Component:
   - component: {fileID: 676411647377884336}
   - component: {fileID: 7705750770194409957}
-  - component: {fileID: 4077368922591242760}
   m_Layer: 0
   m_Name: Bird Camera 1
   m_TagString: MainCamera
@@ -1139,11 +1048,3 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4077368922591242760
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7973601594731740529}
-  m_Enabled: 1
