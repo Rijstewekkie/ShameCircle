@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - BirdCube
   layers:
   - Default
   - TransparentFX
@@ -11,22 +12,22 @@ TagManager:
   - 
   - Water
   - UI
+  - better ui
+  - Buttons
+  - Foreground
   - 
+  - Bird Layer 1
+  - Decor Layer 1
+  - Bird Layer 2
+  - Decor Layer 2
+  - Bird Layer 3
+  - Decor Layer 3
+  - Bird Layer 4
+  - Decor Layer 4
+  - Bird Layer 5
+  - Decor Layer 5
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background
   - 
   - 
   - 
