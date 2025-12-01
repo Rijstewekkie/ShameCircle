@@ -6,8 +6,8 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewLayer 2
-  m_DiffuseTexture: {fileID: 2800000, guid: e09cc4578c253814d87e2c07c5d071f9, type: 3}
+  m_Name: Pebbles
+  m_DiffuseTexture: {fileID: 2800000, guid: 3a811b88eff47864eb963933bfa9d7db, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 4, y: 4}
