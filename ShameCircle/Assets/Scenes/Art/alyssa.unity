@@ -1013,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Taiga tree remeshed 2.0 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 21733754912734465, guid: 61f89442111b7a649aca24597e3cd43f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 794575343884511163, guid: 61f89442111b7a649aca24597e3cd43f, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.3
