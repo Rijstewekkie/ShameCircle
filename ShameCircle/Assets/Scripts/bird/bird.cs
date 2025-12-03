@@ -2,8 +2,7 @@
 
 public class Birdmovement : MonoBehaviour
 {
-    
-    public float Movespeed = 4f;            
+    public float Movespeed = 15f;            
     public float Maxturnspeed = 2f;         
     public float Glidechance = 0.2f;        
          
@@ -14,14 +13,23 @@ public class Birdmovement : MonoBehaviour
     private float nextCourseChange;
     private bool gliding = false;
 
+    [SerializeField] private bool respawn;
+    
+    private BirdIdentityHolder identityHolder;
+    
+    public bool birdDirection;
+    
+    public Vector3 spawnPos;
+
     void Start()
     {
         // eerste doelpunt iets voor de vogel
         targetPos = transform.position + new Vector3(5, 0, 0);
         nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
+        identityHolder = GetComponent<BirdIdentityHolder>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         UpdateTarget();
         MoveTowardsTarget();
@@ -30,20 +38,41 @@ public class Birdmovement : MonoBehaviour
 
     void UpdateTarget()
     {
-        // om de zoveel tijd koersverandering
-        if (Time.time > nextCourseChange)
+        if (identityHolder.Flying)
         {
-            nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
-            gliding = Random.value < Glidechance;
+            if (birdDirection)
+            {
+                // om de zoveel tijd koersverandering
+                if (Time.time > nextCourseChange)
+                {
+                    nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
+                    gliding = Random.value < Glidechance;
 
-            float randomY = Random.Range(-8, 8);
-            float randomX = Random.Range(0f, Horizontal);
+                    float randomY = Random.Range(-8, 8);
+                    float randomX = Random.Range(0f, Horizontal);
 
-            targetPos += new Vector3(5f + randomX, randomY, 0f);
+                    targetPos -= new Vector3(5f + +randomX, randomY, 0f);
+                }
+            }
+            else if (!birdDirection)
+            {
+                // om de zoveel tijd koersverandering
+                if (Time.time > nextCourseChange)
+                {
+                    nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
+                    gliding = Random.value < Glidechance;
+
+                    float randomY = Random.Range(-8, 8);
+                    float randomX = Random.Range(0f, Horizontal);
+
+                    targetPos += new Vector3(5f + randomX, randomY, 0f);
+                }
+            }
         }
-
-        // target schuift langzaam mee naar rechts
-        targetPos += Vector3.right * Time.deltaTime * Movespeed * 0.5f;
+        else if (!identityHolder.Flying)
+        {
+            targetPos = new Vector3(-spawnPos.x, spawnPos.y, spawnPos.z);
+        }
     }
 
     void MoveTowardsTarget()
@@ -62,11 +91,34 @@ public class Birdmovement : MonoBehaviour
 
     void CheckRespawn()
     {
-        // teleport terug links als te ver rechts
-        if (transform.position.x > 55f)
+        if (birdDirection)
+        {
+            if (transform.position.x !< -spawnPos.x)
+            {
+                return;
+            }
+        }
+        else if (!birdDirection)
+        {
+            if (transform.position.x !> -spawnPos.x)
+            {
+                return;
+            }
+        }
+        else
+        {
+            return;
+        }
+        
+        if (respawn)
         {
             transform.position = new Vector3(-55f, Random.Range(-12,15), 26);
             targetPos = transform.position + new Vector3(5, 0, 0);
+            // teleport terug links als te ver rechts
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }
