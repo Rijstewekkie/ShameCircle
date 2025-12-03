@@ -171,7 +171,7 @@ MonoBehaviour:
         m_Version: 0
         m_StripUnusedPostProcessingVariants: 0
         m_StripUnusedVariants: 1
-        m_StripScreenCoordOverrideVariants: 1
+        m_StripScreenCoordOverrideVariants: 0
     - rid: 2290606280675426556
       type: {class: Renderer2DResources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.Runtime}
       data:
