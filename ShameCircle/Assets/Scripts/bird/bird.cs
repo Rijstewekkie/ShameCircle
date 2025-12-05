@@ -2,7 +2,7 @@
 
 public class Birdmovement : MonoBehaviour
 {
-    public float Movespeed = 15f;            
+    public float Movespeed;            
     public float Maxturnspeed = 2f;         
     public float Glidechance = 0.2f;        
          
@@ -11,22 +11,26 @@ public class Birdmovement : MonoBehaviour
 
     private Vector3 targetPos;
     private float nextCourseChange;
-    private bool gliding = false;
+    private bool gliding;
 
     [SerializeField] private bool respawn;
+    [SerializeField] private bool simpleMovement;
     
     private BirdIdentityHolder identityHolder;
     
     public bool birdDirection;
+
+    private float elapsedDistance;
     
     public Vector3 spawnPos;
 
     void Start()
     {
         // eerste doelpunt iets voor de vogel
-        targetPos = transform.position + new Vector3(5, 0, 0);
+        targetPos = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
         nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
         identityHolder = GetComponent<BirdIdentityHolder>();
+        simpleMovement = true;
     }
 
     void FixedUpdate()
@@ -43,7 +47,7 @@ public class Birdmovement : MonoBehaviour
             if (birdDirection)
             {
                 // om de zoveel tijd koersverandering
-                if (Time.time > nextCourseChange)
+                if (Time.time > nextCourseChange && !simpleMovement)
                 {
                     nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
                     gliding = Random.value < Glidechance;
@@ -54,7 +58,7 @@ public class Birdmovement : MonoBehaviour
                     targetPos -= new Vector3(5f + +randomX, randomY, 0f);
                 }
             }
-            else if (!birdDirection)
+            else if (!birdDirection && !simpleMovement)
             {
                 // om de zoveel tijd koersverandering
                 if (Time.time > nextCourseChange)
@@ -69,56 +73,44 @@ public class Birdmovement : MonoBehaviour
                 }
             }
         }
-        else if (!identityHolder.Flying)
-        {
-            targetPos = new Vector3(-spawnPos.x, spawnPos.y, spawnPos.z);
-        }
     }
 
     void MoveTowardsTarget()
     {
-        Vector3 dir = (targetPos - transform.position).normalized;
+        if (simpleMovement)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * Movespeed);
+        }
+        else
+        {
+            Vector3 dir = (targetPos - transform.position).normalized;
 
-        float turnFactor = gliding ? 0.2f : 1f;
+            float turnFactor = gliding ? 0.2f : 1f;
 
-        // vloeiend draaien naar richting
-        Vector3 smoothDir = Vector3.Lerp(transform.right, dir, Time.deltaTime * Maxturnspeed * turnFactor).normalized;
-        transform.right = smoothDir;
+            //vloeiend draaien naar richting
+            Vector3 smoothDir = Vector3.Lerp(transform.right, dir, Time.deltaTime * Maxturnspeed * turnFactor)
+                .normalized;
+            transform.right = smoothDir;
 
-        float speed = gliding ? Movespeed * 1.3f : Movespeed;
-        transform.position += transform.right * speed * Time.deltaTime;
+            float speed = gliding ? Movespeed * 1.3f : Movespeed;
+            transform.position += transform.right * speed * Time.deltaTime;
+        }
     }
 
     void CheckRespawn()
     {
-        if (birdDirection)
+        if (Vector3.Distance(transform.position, targetPos) <= 1f)
         {
-            if (transform.position.x !< -spawnPos.x)
+            if (respawn)
             {
-                return;
+                transform.position = new Vector3(-55f, Random.Range(-12, 15), 26);
+                targetPos = transform.position + new Vector3(5, 0, 0);
+                // teleport terug links als te ver rechts
             }
-        }
-        else if (!birdDirection)
-        {
-            if (transform.position.x !> -spawnPos.x)
+            else
             {
-                return;
+                Destroy(gameObject);
             }
-        }
-        else
-        {
-            return;
-        }
-        
-        if (respawn)
-        {
-            transform.position = new Vector3(-55f, Random.Range(-12,15), 26);
-            targetPos = transform.position + new Vector3(5, 0, 0);
-            // teleport terug links als te ver rechts
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 }
