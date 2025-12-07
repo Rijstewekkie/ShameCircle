@@ -114,12 +114,14 @@ public class TouchRegister : MonoBehaviour
             {
                 TouchLocation2 = Mouse.current.position.ReadValue();
                 Debug.Log(TouchLocation1 + "&" + TouchLocation2);
+                ReleaseActionActive = true;
             }
             else
             {
                 TouchLocation1 = Vector2.zero;
                 TouchLocation2 = Vector2.zero;
                 Debug.Log("Reset");
+                ReleaseActionActive = false;
             }
         }
     }

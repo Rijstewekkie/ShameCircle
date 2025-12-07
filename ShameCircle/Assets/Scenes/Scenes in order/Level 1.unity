@@ -485,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2351716689271968526, guid: cd57e217bd96fc845aba383170baccf3, type: 3}
       propertyPath: m_Layer
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2536856669956470241, guid: cd57e217bd96fc845aba383170baccf3, type: 3}
       propertyPath: m_Layer
@@ -521,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3578364649604315635, guid: cd57e217bd96fc845aba383170baccf3, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3693106220268322572, guid: cd57e217bd96fc845aba383170baccf3, type: 3}
       propertyPath: m_Layer
@@ -669,7 +669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8076144601973510166, guid: cd57e217bd96fc845aba383170baccf3, type: 3}
       propertyPath: m_Layer
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8141939715037245812, guid: cd57e217bd96fc845aba383170baccf3, type: 3}
       propertyPath: m_Layer
@@ -754,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: floorIncrease
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: maxSpawnHeight
@@ -839,7 +839,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1327669308435695135, guid: 47086162c64367e4a9f641c3be3adde8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 1327669308435695135, guid: 47086162c64367e4a9f641c3be3adde8, type: 3}
       propertyPath: m_LocalPosition.y
