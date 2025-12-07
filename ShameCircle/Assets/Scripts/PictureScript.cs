@@ -7,7 +7,7 @@ public class DrawBoxController : MonoBehaviour
     [SerializeField] private GameObject drawBox;
     private GameObject activeDrawBox;
 
-    private bool drawBoxInitialized = false;
+    private bool drawBoxInitialized;
 
     //Box min/max coordinates
     private float boxMinX;
@@ -32,6 +32,8 @@ public class DrawBoxController : MonoBehaviour
     [SerializeField] GameObject CollisionCube;
     private GameObject activeCollisionCube;
     [SerializeField] private float collisionCubeDepth;
+    
+    public bool ReleaseActionActive;
 
 
     void Start()
@@ -46,6 +48,8 @@ public class DrawBoxController : MonoBehaviour
     
     void Update()
     {
+        ReleaseActionActive = Parent.ReleaseActionActive;
+        
         if (Parent == null)
         {
             Debug.LogError("TouchRegister not found");
@@ -75,6 +79,7 @@ public class DrawBoxController : MonoBehaviour
         activeDrawBox = Instantiate(drawBox, Parent.TouchMap.transform);
         activeCollisionCube = Instantiate(CollisionCube);
         drawBoxInitialized = true;
+        activeCollisionCube.GetComponent<BirdCheckBox>().Parent = this;
     }
 
     void UninitializeBox() //De doos is ol' yeller

@@ -7,14 +7,9 @@
     <list default="true" id="0b46e06c-3b1d-4a86-b921-bc5387f666f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multi-Camera Asset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multi-Camera Asset.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TempRobin.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TempRobin.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BirdCheckBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BirdCheckBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PictureScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PictureScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/bird/BirdSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/bird/BirdSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Touch Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Touch Register.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +138,8 @@
       <workItem from="1764763681174" duration="7788000" />
       <workItem from="1764837878538" duration="9634000" />
       <workItem from="1764934965712" duration="10867000" />
-      <workItem from="1765112091508" duration="2916000" />
+      <workItem from="1765112091508" duration="6013000" />
+      <workItem from="1765142680371" duration="1481000" />
     </task>
     <servers />
   </component>
