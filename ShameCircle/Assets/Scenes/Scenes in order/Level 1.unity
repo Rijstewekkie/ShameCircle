@@ -138,15 +138,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2173250629941917551, guid: cdf85ec945ba22e4d9e78e0220a2aa66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.07953
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2173250629941917551, guid: cdf85ec945ba22e4d9e78e0220a2aa66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -77.98014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2173250629941917551, guid: cdf85ec945ba22e4d9e78e0220a2aa66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 322.32666
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2173250629941917551, guid: cdf85ec945ba22e4d9e78e0220a2aa66, type: 3}
       propertyPath: m_LocalRotation.w
@@ -279,7 +279,7 @@ PrefabInstance:
       objectReference: {fileID: 104922787}
     - target: {fileID: 5725111790969907765, guid: 2d001d49451654e459b369f9c43d3cea, type: 3}
       propertyPath: collisionCubeDepth
-      value: 259.95
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -847,7 +847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1327669308435695135, guid: 47086162c64367e4a9f641c3be3adde8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.51
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1327669308435695135, guid: 47086162c64367e4a9f641c3be3adde8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -880,10 +880,6 @@ PrefabInstance:
     - target: {fileID: 6604359344647774934, guid: 47086162c64367e4a9f641c3be3adde8, type: 3}
       propertyPath: m_Name
       value: Multi-Camera Asset
-      objectReference: {fileID: 0}
-    - target: {fileID: 6664660192628453322, guid: 47086162c64367e4a9f641c3be3adde8, type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

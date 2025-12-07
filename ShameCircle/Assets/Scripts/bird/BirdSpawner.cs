@@ -97,7 +97,6 @@ public class BirdSpawner : MonoBehaviour
         {
             activeBirdMovementScript.birdDirection = true;
         }
-        Debug.Log(ffChance);
 
         if (!activeBirdMovementScript.birdDirection) //zet de vogel links/rechts neer
         {

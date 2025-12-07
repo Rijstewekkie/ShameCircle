@@ -75,7 +75,6 @@ public class DrawBoxController : MonoBehaviour
         activeDrawBox = Instantiate(drawBox, Parent.TouchMap.transform);
         activeCollisionCube = Instantiate(CollisionCube);
         drawBoxInitialized = true;
-        Debug.Log("Box initialized");
     }
 
     void UninitializeBox() //De doos is ol' yeller
@@ -88,8 +87,6 @@ public class DrawBoxController : MonoBehaviour
 
         drawBoxInitialized = false;
         ResetBoxCoords();
-        
-        Debug.Log("Box Destroyed");
     }
 
     void calculateBoxSize()
