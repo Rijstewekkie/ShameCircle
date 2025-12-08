@@ -14,7 +14,7 @@ public class GameSpeedManager : MonoBehaviour
     {
         uiManager = gameObject.GetComponent<UIManager>();
         
-        if (SSpeedManager != this)
+        if (SSpeedManager == this)
         {
             Destroy(this);
         }        
