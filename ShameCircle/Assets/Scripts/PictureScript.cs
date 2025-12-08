@@ -7,7 +7,7 @@ public class DrawBoxController : MonoBehaviour
     [SerializeField] private GameObject drawBox;
     private GameObject activeDrawBox;
 
-    private bool drawBoxInitialized = false;
+    private bool drawBoxInitialized;
 
     //Box min/max coordinates
     private float boxMinX;
@@ -32,6 +32,8 @@ public class DrawBoxController : MonoBehaviour
     [SerializeField] GameObject CollisionCube;
     private GameObject activeCollisionCube;
     [SerializeField] private float collisionCubeDepth;
+    
+    public bool ReleaseActionActive;
 
 
     void Start()
@@ -46,6 +48,8 @@ public class DrawBoxController : MonoBehaviour
     
     void Update()
     {
+        ReleaseActionActive = Parent.ReleaseActionActive;
+        
         if (Parent == null)
         {
             Debug.LogError("TouchRegister not found");
@@ -75,7 +79,7 @@ public class DrawBoxController : MonoBehaviour
         activeDrawBox = Instantiate(drawBox, Parent.TouchMap.transform);
         activeCollisionCube = Instantiate(CollisionCube);
         drawBoxInitialized = true;
-        Debug.Log("Box initialized");
+        activeCollisionCube.GetComponent<BirdCheckBox>().Parent = this;
     }
 
     void UninitializeBox() //De doos is ol' yeller
@@ -88,8 +92,6 @@ public class DrawBoxController : MonoBehaviour
 
         drawBoxInitialized = false;
         ResetBoxCoords();
-        
-        Debug.Log("Box Destroyed");
     }
 
     void calculateBoxSize()
@@ -127,7 +129,7 @@ public class DrawBoxController : MonoBehaviour
         
         //Mix de canvas en "echte" wereld
         Vector3 screenCenter = new Vector3(boxCenter.x, boxCenter.y, collisionCubeDepth);
-        Vector3 worldCenter = screenshotCamera.ScreenToWorldPoint(screenCenter);
+        Vector3 worldCenter = Camera.main.ScreenToWorldPoint(screenCenter);
         activeCollisionCube.transform.position = worldCenter;
 
         //Scherm groote bs
@@ -135,8 +137,8 @@ public class DrawBoxController : MonoBehaviour
         Vector3 screenRight = new Vector3(boxMaxX, boxCenter.y, collisionCubeDepth);
 
         float worldWidth = Vector3.Distance(
-            screenshotCamera.ScreenToWorldPoint(screenLeft),
-            screenshotCamera.ScreenToWorldPoint(screenRight)
+            Camera.main.ScreenToWorldPoint(screenLeft),
+            Camera.main.ScreenToWorldPoint(screenRight)
         );
 
         //Meer scherm groote bs
@@ -144,12 +146,12 @@ public class DrawBoxController : MonoBehaviour
         Vector3 screenTop    = new Vector3(boxCenter.x, boxMaxY, collisionCubeDepth);
 
         float worldHeight = Vector3.Distance(
-            screenshotCamera.ScreenToWorldPoint(screenBottom),
-            screenshotCamera.ScreenToWorldPoint(screenTop)
+            Camera.main.ScreenToWorldPoint(screenBottom),
+            Camera.main.ScreenToWorldPoint(screenTop)
         );
 
         //Placement (Daan, raak gras aan <3)
-        activeCollisionCube.transform.localScale = new Vector3(worldWidth, worldHeight, 500f);
+        activeCollisionCube.transform.localScale = new Vector3(worldWidth, worldHeight, 100f);
     }
 
     void ResetBoxCoords()

@@ -7,26 +7,35 @@
     <list default="true" id="0b46e06c-3b1d-4a86-b921-bc5387f666f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Multi-Camera Asset.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Multi-Camera Asset.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TouchImage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TouchImage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BirdSpotScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BirdSpotScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin/BirdSelectorDEMO.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin/BirdSelectorDEMO.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelBeat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelBeat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Touch Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Touch Register.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b1b6e137fed94ac1a54aeeb4e5f261681e0400/66/b441c467/Vector3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b1b6e137fed94ac1a54aeeb4e5f261681e0400/96/ac7484b0/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FadeAndDelete.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BirdCheckBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelBeat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/Score manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/UI Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PictureScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpinBounce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/bird/BirdSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/bird/bird.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -38,6 +47,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -124,6 +134,13 @@
       <workItem from="1764156915601" duration="11171000" />
       <workItem from="1764245892445" duration="4396000" />
       <workItem from="1764330700216" duration="10580000" />
+      <workItem from="1764574831010" duration="10741000" />
+      <workItem from="1764763681174" duration="7788000" />
+      <workItem from="1764837878538" duration="9634000" />
+      <workItem from="1764934965712" duration="10867000" />
+      <workItem from="1765112091508" duration="6013000" />
+      <workItem from="1765142680371" duration="1724000" />
+      <workItem from="1765144542216" duration="68000" />
     </task>
     <servers />
   </component>

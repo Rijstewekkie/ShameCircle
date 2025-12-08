@@ -16,10 +16,12 @@ public class TouchRegister : MonoBehaviour
     
     [SerializeField] private bool DEBUGPCMODE; //voor PC testing
     
+    public bool ReleaseActionActive;
+    
     
     void Start()
     {
-        TouchMap = this.gameObject.GetComponent<Canvas>();
+        TouchMap = gameObject.GetComponent<Canvas>();
 
         if (TouchMap == null)
         {
@@ -27,7 +29,12 @@ public class TouchRegister : MonoBehaviour
         }
         else
         {
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
+        }
+
+        if (UnityEditor.EditorApplication.isPlaying)
+        {
+            DEBUGPCMODE = false;
         }
     }
 
@@ -72,6 +79,14 @@ public class TouchRegister : MonoBehaviour
         }
         else if (Input.touchCount == 1)
         {
+            if (TouchLocation1 != Vector2.zero && TouchLocation2 != Vector2.zero)
+            {
+                ReleaseActionActive = true;
+            }
+            else
+            {
+                ReleaseActionActive = false;
+            }
             TouchLocation1 = TouchInput1.position;
             TouchLocation2 = Vector2.zero;
             
@@ -99,12 +114,14 @@ public class TouchRegister : MonoBehaviour
             {
                 TouchLocation2 = Mouse.current.position.ReadValue();
                 Debug.Log(TouchLocation1 + "&" + TouchLocation2);
+                ReleaseActionActive = true;
             }
             else
             {
                 TouchLocation1 = Vector2.zero;
                 TouchLocation2 = Vector2.zero;
                 Debug.Log("Reset");
+                ReleaseActionActive = false;
             }
         }
     }
