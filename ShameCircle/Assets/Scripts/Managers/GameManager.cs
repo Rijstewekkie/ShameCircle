@@ -17,17 +17,28 @@ public class GameManager : MonoBehaviour
         LevelBeat = GetComponent<LevelBeatScript>();
     }
 
-    public void BirdCaught()
+    private void Update()
     {
-        Debug.Log(SelectedBird);
-        if (SelectedBird.Imposter)
+        if (SelectedBird != null)
         {
-            LevelBeat.LevelBeat = true;
+            SelectionScreen.SSelectionActive = true;
         }
         else
         {
-            SelectedBird = null;
-            SelectedBirdName = null;
+            SelectionScreen.SSelectionActive = false;
+        }
+    }
+
+    public void BirdCaught()
+    {
+        SelectionScreen.SSelectionActive = true;
+        Debug.Log("SelectedBird = " + SelectedBird);
+        if (SelectedBird.Imposter)
+        {
+            
+        }
+        else
+        {
             scoremanager.WrongGuesses++;
         }
     }

@@ -79,7 +79,7 @@ public class Birdmovement : MonoBehaviour
     {
         if (simpleMovement)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * Movespeed);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * (Movespeed * GameSpeedManager.SGameSpeed));
         }
         else
         {

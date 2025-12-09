@@ -68,7 +68,10 @@ public class BirdSpawner : MonoBehaviour
     void FixedUpdate()
     {
         //kleine timer
-        activeSpawnTimer -= Time.deltaTime * birdSpawnRate;
+        if (!GameSpeedManager.sPauzeGame)
+        {
+            activeSpawnTimer -= Time.deltaTime * (birdSpawnRate / GameSpeedManager.SGameSpeed);
+        }
 
         if (activeSpawnTimer <= 0)
         {

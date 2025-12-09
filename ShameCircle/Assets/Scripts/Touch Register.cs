@@ -32,7 +32,7 @@ public class TouchRegister : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        if (UnityEditor.EditorApplication.isPlaying)
+        if (!UnityEditor.EditorApplication.isPlaying)
         {
             DEBUGPCMODE = false;
         }
