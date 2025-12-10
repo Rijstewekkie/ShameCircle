@@ -24,11 +24,6 @@ public class TouchRegister : MonoBehaviour
         TouchMap = GetComponent<Canvas>();
         
         DontDestroyOnLoad(gameObject);
-
-        if (!Application.isEditor)
-        {
-            DEBUGPCMODE = false;
-        }
     }
 
     void Update()
