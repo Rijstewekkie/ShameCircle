@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class SelectionScreen : MonoBehaviour
@@ -10,11 +11,15 @@ public class SelectionScreen : MonoBehaviour
     [SerializeField] GameObject MainCamera;
     [SerializeField] GameObject TouchRegister;
     private TouchRegister actualTouchRegister;
+
+    [SerializeField] TMP_Text basicInfo;
+    [SerializeField] TMP_Text extraInfo;
     
     void Update()
     {
         if (SSelectionActive)
         {
+            runInfo();
             if (!selectionActiveDelay)
             {
                 actualTouchRegister = TouchRegister.GetComponent<TouchRegister>();
@@ -32,10 +37,8 @@ public class SelectionScreen : MonoBehaviour
 
             if (actualTouchRegister.TouchLocation1 != Vector2.zero)
             {
-                Debug.Log("Test1 true = " + SSelectionActive);
                 actualTouchRegister.TouchLocation1 = Vector2.zero;
                 SSelectionActive = false;
-                Debug.Log("Test2 false = " + SSelectionActive);
             }
         }
         else if (!SSelectionActive)
@@ -50,5 +53,10 @@ public class SelectionScreen : MonoBehaviour
             
             selectionActiveDelay = false;
         }
+    }
+
+    void runInfo()
+    {
+        //if 
     }
 }

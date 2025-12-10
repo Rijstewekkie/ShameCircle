@@ -48,6 +48,5 @@ public class GameSpeedManager : MonoBehaviour
             SGameSpeed = SSpeedToApply;
         }
 
-        Time.timeScale = SGameSpeed;
     }
 }
