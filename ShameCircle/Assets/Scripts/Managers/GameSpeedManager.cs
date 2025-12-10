@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameSpeedManager : MonoBehaviour
 {
     public static float SGameSpeed; //actuale speed
-    public static float SSpeedToApply; //speed storage
+    public static float SSpeedToApply = 1; //speed storage
     public static bool sPauzeGame;
     public static bool sLevelBeat;
     

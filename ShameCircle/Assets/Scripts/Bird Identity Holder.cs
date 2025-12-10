@@ -23,6 +23,9 @@ public class BirdIdentityHolder : MonoBehaviour
     [SerializeField] public bool Imposter;
 
     private GameObject IgnoreAsset;
+
+    public int RandomChance;
+    
     void Start()
     {
         if (BirdType == BirdTypes.NULL)
@@ -33,7 +36,7 @@ public class BirdIdentityHolder : MonoBehaviour
 
         if (BirdType == BirdTypes.EurasianRobin)
         { 
-            int RandomChance = Random.Range(0, 100);
+            RandomChance = Random.Range(0, 100);
             if (RandomChance == 69)
             {
                 IgnoreAsset = Resources.Load($"IgnoreThis") as GameObject;

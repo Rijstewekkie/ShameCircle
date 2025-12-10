@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456614682543c5d49986d4eec2e38bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Parent: {fileID: 0}
+  SelectedBird: {fileID: 0}
 --- !u!33 &3656166176300835802
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -62,7 +64,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3154073087059540651}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

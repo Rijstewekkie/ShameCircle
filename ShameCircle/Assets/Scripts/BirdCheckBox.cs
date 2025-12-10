@@ -7,70 +7,81 @@ public class BirdCheckBox : MonoBehaviour
     private string BirdName;
     private BirdIdentityHolder bird;
     
-    private GameManager gameManager;
-
     public DrawBoxController Parent;
     
-    private bool releaseAction;
+    [SerializeField] bool releaseAction;
 
     private List<GameObject> birds = new List<GameObject>();
+
+    private BirdIdentityHolder otherScript;
     
     public GameObject SelectedBird;
     
     private Vector3 thisPosition;
     private Vector3 otherPosition;
     private Vector3 selectedPosition;
-    
-    void Awake()
-    {
-        gameManager = GameObject.Find("ManagerManager").GetComponent<GameManager>();
-    }
 
     void Update()
     {
+        if (Parent.ReleaseActionActive && !releaseAction)
+        {
+            SelectClosestBird();
+        }
+
+        if (!Parent.ReleaseActionActive && SelectedBird != null)
+            ClearSelection();
+
         releaseAction = Parent.ReleaseActionActive;
         thisPosition = new Vector3(transform.position.x, transform.position.y, 0);
     }
     
     void OnTriggerEnter(Collider other)
     {
-        if (releaseAction)
+        otherScript = other.GetComponent<BirdIdentityHolder>();
+        if (otherScript != null && !birds.Contains(other.gameObject))
+            birds.Add(other.gameObject);
+    }
+
+    void SelectClosestBird()
+    {
+        if (birds.Count == 0)
         {
-            if (other.GetComponent<BirdIdentityHolder>() != null)
+            return;
+        }
+        
+        float closest = float.MaxValue;
+
+        foreach (GameObject b in birds)
+        {
+            Vector3 pos = new Vector3(b.transform.position.x, b.transform.position.y, 0);
+            float dist = Vector3.Distance(thisPosition, pos);
+
+            if (dist < closest)
             {
-                birds.Add(other.gameObject);
-                foreach (GameObject bird in birds)
-                {
-                    otherPosition = new Vector3(other.transform.position.x, other.transform.position.y, 0);
-                    if (Vector3.Distance(thisPosition, otherPosition) < Vector3.Distance(thisPosition, selectedPosition))
-                    {
-                        SelectedBird = other.gameObject;
-                        selectedPosition = new Vector3(SelectedBird.transform.position.x, SelectedBird.transform.position.y, 0);
-                    }
-                    if (selectedPosition == Vector3.zero)
-                    {
-                        SelectedBird = other.gameObject;
-                        selectedPosition = new Vector3(SelectedBird.transform.position.x, SelectedBird.transform.position.y, 0);
-                    }
-                }
-                bird = SelectedBird.GetComponent<BirdIdentityHolder>();
-                BirdName = bird.BirdType.ToString();
-                BirdSelected();
+                closest = dist;
+                SelectedBird = b;
+                selectedPosition = pos;
             }
         }
-        else
-        {
-            birds.Clear();
-            SelectedBird = null;
-            selectedPosition = Vector3.zero;
-        }
+
+        bird = SelectedBird.GetComponent<BirdIdentityHolder>();
+        BirdName = bird.BirdType.ToString();
+        BirdSelected();
+    }
+
+    void ClearSelection()
+    {
+        birds.Clear();
+        SelectedBird = null;
+        selectedPosition = Vector3.zero;
     }
 
     void BirdSelected()
     {
-        gameManager.SelectedBirdName = BirdName;
-        gameManager.SelectedBird = bird;
-        gameManager.BirdCaught();
+        Debug.Log("BirdSelected");
+        GameManager.SelectedBirdName = BirdName;
+        GameManager.SelectedBird = bird;
+        GameManager.BirdCaught();
         releaseAction = false;
         Parent.ReleaseActionActive = false;
     }

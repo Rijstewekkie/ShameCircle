@@ -32,7 +32,7 @@ public class TouchRegister : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        if (UnityEditor.EditorApplication.isPlaying)
+        if (!UnityEditor.EditorApplication.isPlaying)
         {
             DEBUGPCMODE = false;
         }
@@ -112,9 +112,9 @@ public class TouchRegister : MonoBehaviour
             }
             else if (TouchLocation2 == Vector2.zero)
             {
+                ReleaseActionActive = true;
                 TouchLocation2 = Mouse.current.position.ReadValue();
                 Debug.Log(TouchLocation1 + "&" + TouchLocation2);
-                ReleaseActionActive = true;
             }
             else
             {

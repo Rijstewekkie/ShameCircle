@@ -77,7 +77,7 @@ public class SpinBounce : MonoBehaviour
 
         activeBounce = transform.position.y - startPos.y;
        
-        actualBounceSpeed = (bounceRange - activeBounce) * bounceSpeed + .25f;
+        actualBounceSpeed = (bounceRange - activeBounce) * bounceSpeed + bounceSpeed / 100;
         
         if (activeBounce > bounceRange)
         {

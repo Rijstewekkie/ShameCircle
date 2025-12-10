@@ -6,7 +6,7 @@ public class Scoremanager : MonoBehaviour
     
     public static int SScore;
 
-    public int WrongGuesses;
+    public static int WrongGuesses;
     void Start()
     {
         if (SScoreInstance == null)
