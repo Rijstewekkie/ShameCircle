@@ -48,6 +48,10 @@ public class GameSpeedManager : MonoBehaviour
             SGameSpeed = SSpeedToApply;
         }
 
-        Time.timeScale = SGameSpeed;
+    }
+
+    public void ApplicationPause()
+    {
+        sPauzeGame = !sPauzeGame;
     }
 }
