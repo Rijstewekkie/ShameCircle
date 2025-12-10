@@ -3,8 +3,8 @@ using UnityEngine;
 public class messages : MonoBehaviour
 {
     public GameObject targetObject;
-    public float time = 10f;   // tijd in seconden
-
+    public float time = 10f;
+    public float resettime = 60f;
     private float timer;
 
     private void Awake()
@@ -19,6 +19,12 @@ public class messages : MonoBehaviour
         {
             targetObject.SetActive(true);
            
+        }
+        if (timer >= resettime)
+        {
+            targetObject.SetActive(false);
+            timer = 0;
+
         }
     }
 }

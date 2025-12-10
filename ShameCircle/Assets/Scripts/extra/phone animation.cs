@@ -11,9 +11,13 @@ public class phoneanimation : MonoBehaviour
     public void Triggeranimation()
     {
        animator.SetTrigger("phonedown");
-     }
-     
-    
-    
+    }
+    public void Triggeranimationup()
+    {
+        animator.SetTrigger("phoneup");
+    }
+
+
+
 }
 
