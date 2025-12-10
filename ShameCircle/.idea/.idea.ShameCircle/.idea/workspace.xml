@@ -7,12 +7,19 @@
     <list default="true" id="0b46e06c-3b1d-4a86-b921-bc5387f666f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BirdCheckBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BirdCheckBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Score manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Score manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unscripted Animated Birds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unscripted Animated Birds/UA Robin Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Unscripted Animated Birds/UA Robin Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionBirds.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionBirds.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectionScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Touch Register.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Touch Register.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectionScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpinBounce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/bird/BirdSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7652a5c7e246/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -64,6 +72,17 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/idk\ShameCircle.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\rmvan\Downloads\idk" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.62f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\rmvan\ShameCircle - Avian Attributes\ShameCircle&quot; -debugCodeOptimization" />
@@ -146,7 +165,8 @@
       <workItem from="1765144542216" duration="68000" />
       <workItem from="1765179767862" duration="8622000" />
       <workItem from="1765271496233" duration="5516000" />
-      <workItem from="1765312843535" duration="9165000" />
+      <workItem from="1765312843535" duration="9407000" />
+      <workItem from="1765366988249" duration="9169000" />
     </task>
     <servers />
   </component>

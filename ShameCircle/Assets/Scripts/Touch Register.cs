@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class TouchRegister : MonoBehaviour
 {
     public Canvas TouchMap;
-
+    
     public Touch TouchInput1; //Click / vinger 1
     public Touch TouchInput2; //Click / vinger 2
 
@@ -21,21 +21,9 @@ public class TouchRegister : MonoBehaviour
     
     void Start()
     {
-        TouchMap = gameObject.GetComponent<Canvas>();
-
-        if (TouchMap == null)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-
-        if (!UnityEditor.EditorApplication.isPlaying)
-        {
-            DEBUGPCMODE = false;
-        }
+        TouchMap = GetComponent<Canvas>();
+        
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
