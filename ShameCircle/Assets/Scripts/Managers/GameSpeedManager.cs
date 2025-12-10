@@ -14,7 +14,8 @@ public class GameSpeedManager : MonoBehaviour
     {
         uiManager = gameObject.GetComponent<UIManager>();
         
-        if (SSpeedManager == this)
+        if (SSpeedManager != null && SSpeedManager != this)
+
         {
             Destroy(this);
         }        
@@ -27,7 +28,7 @@ public class GameSpeedManager : MonoBehaviour
 
     void Update()
     {
-        if (sLevelBeat & sPauzeGame)
+        if (sLevelBeat && sPauzeGame)
         {
             sPauzeGame = false;
         }
@@ -46,5 +47,7 @@ public class GameSpeedManager : MonoBehaviour
         {
             SGameSpeed = SSpeedToApply;
         }
+
+        Time.timeScale = SGameSpeed;
     }
 }
