@@ -7,8 +7,6 @@ public class BirdCheckBox : MonoBehaviour
     private string BirdName;
     private BirdIdentityHolder bird;
     
-    private GameManager gameManager;
-
     public DrawBoxController Parent;
     
     [SerializeField] bool releaseAction;
@@ -22,43 +20,35 @@ public class BirdCheckBox : MonoBehaviour
     private Vector3 thisPosition;
     private Vector3 otherPosition;
     private Vector3 selectedPosition;
-    
-    void Awake()
-    {
-        gameManager = GameObject.Find("ManagerManager").GetComponent<GameManager>();
-    }
 
     void Update()
     {
-        releaseAction = Parent.ReleaseActionActive;
-        thisPosition = new Vector3(transform.position.x, transform.position.y, 0);
-
-        if (birds.Count > 0 && releaseAction)
+        if (Parent.ReleaseActionActive && !releaseAction)
         {
             SelectClosestBird();
         }
-        else if (!releaseAction && SelectedBird != null)
-        {
+
+        if (!Parent.ReleaseActionActive && SelectedBird != null)
             ClearSelection();
-        }
+
+        releaseAction = Parent.ReleaseActionActive;
+        thisPosition = new Vector3(transform.position.x, transform.position.y, 0);
     }
     
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
-        if (!releaseAction) return;
-        
         otherScript = other.GetComponent<BirdIdentityHolder>();
-        Debug.Log(releaseAction);
         if (otherScript != null && !birds.Contains(other.gameObject))
-        {
             birds.Add(other.gameObject);
-            Debug.Log(birds.Count);
-        }
     }
 
     void SelectClosestBird()
     {
+        if (birds.Count == 0)
+        {
+            return;
+        }
+        
         float closest = float.MaxValue;
 
         foreach (GameObject b in birds)
@@ -89,9 +79,9 @@ public class BirdCheckBox : MonoBehaviour
     void BirdSelected()
     {
         Debug.Log("BirdSelected");
-        gameManager.SelectedBirdName = BirdName;
-        gameManager.SelectedBird = bird;
-        gameManager.BirdCaught();
+        GameManager.SelectedBirdName = BirdName;
+        GameManager.SelectedBird = bird;
+        GameManager.BirdCaught();
         releaseAction = false;
         Parent.ReleaseActionActive = false;
     }

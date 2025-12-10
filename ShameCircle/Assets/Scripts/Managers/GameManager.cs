@@ -5,41 +5,30 @@ public class GameManager : MonoBehaviour
     public static GameManager SGameManager;
     public static string SPlayerName;
     
-    private Scoremanager scoremanager;
     private LevelBeatScript LevelBeat;
     private int currentLevel;
 
-    public BirdIdentityHolder SelectedBird;
-    public string SelectedBirdName;
+    public static BirdIdentityHolder SelectedBird;
+    public static string SelectedBirdName;
     void Start()
     {
-        scoremanager = GetComponent<Scoremanager>();
         LevelBeat = GetComponent<LevelBeatScript>();
     }
 
-    private void Update()
+    public static void BirdCaught()
     {
-        if (SelectedBird != null)
+        if (!SelectionScreen.SSelectionActive)
         {
             SelectionScreen.SSelectionActive = true;
+            Debug.Log("SelectedBird = " + SelectedBird);
         }
-        else
-        {
-            SelectionScreen.SSelectionActive = false;
-        }
-    }
-
-    public void BirdCaught()
-    {
-        SelectionScreen.SSelectionActive = true;
-        Debug.Log("SelectedBird = " + SelectedBird);
         if (SelectedBird.Imposter)
         {
             
         }
         else
         {
-            scoremanager.WrongGuesses++;
+            Scoremanager.WrongGuesses++;
         }
     }
 }
