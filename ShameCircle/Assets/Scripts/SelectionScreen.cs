@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectionScreen : MonoBehaviour
 {
@@ -97,6 +98,10 @@ public class SelectionScreen : MonoBehaviour
         else
         {
             Scoremanager.WrongGuesses++;
+        }
+        if(LevelBeatScript.LevelBeat)
+        {
+            Scenemanager.NextScene();
         }
         Scenemanager.ReloadScene();
     }

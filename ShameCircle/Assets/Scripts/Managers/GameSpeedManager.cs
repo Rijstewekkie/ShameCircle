@@ -49,4 +49,9 @@ public class GameSpeedManager : MonoBehaviour
         }
 
     }
+
+    public void ApplicationPause()
+    {
+        sPauzeGame = !sPauzeGame;
+    }
 }
