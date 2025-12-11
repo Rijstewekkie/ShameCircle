@@ -9,6 +9,7 @@ public class SelectionScreen : MonoBehaviour
     
     [SerializeField] GameObject selectionScreen;
     [SerializeField] GameObject MainCamera;
+    [SerializeField] GameObject UI;
     [SerializeField] GameObject TouchRegister;
     private TouchRegister actualTouchRegister;
 
@@ -38,6 +39,7 @@ public class SelectionScreen : MonoBehaviour
             }
             selectionScreen.SetActive(true);
             MainCamera.SetActive(false);
+            UI.gameObject.SetActive(false);
             
             GameSpeedManager.sPauzeGame = true;
             
@@ -53,6 +55,7 @@ public class SelectionScreen : MonoBehaviour
         {
             selectionScreen.SetActive(false);
             MainCamera.SetActive(true);
+            UI.SetActive(true);
 
             if (selectionActiveDelay)
             {

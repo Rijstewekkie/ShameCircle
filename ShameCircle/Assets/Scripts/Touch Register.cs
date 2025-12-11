@@ -21,6 +21,10 @@ public class TouchRegister : MonoBehaviour
     
     void Start()
     {
+        if (!Application.isEditor)
+        {
+            DEBUGPCMODE = false;
+        }
         TouchMap = GetComponent<Canvas>();
         
         DontDestroyOnLoad(gameObject);
@@ -99,26 +103,19 @@ public class TouchRegister : MonoBehaviour
 
     private void PCTouchLocator()
     {
-        if (Input.GetMouseButtonDown(0)) //Doet wat het hier boven deed, maar dan voor PC (met lingering clicks)
+        if (Input.GetMouseButton(0)) //Doet wat het hier boven deed, maar dan voor PC (met lingering clicks)
         {
-            if (TouchLocation1 == Vector2.zero)
-            {
-                TouchLocation1 = Mouse.current.position.ReadValue();
-                Debug.Log(TouchLocation1);
-            }
-            else if (TouchLocation2 == Vector2.zero)
-            {
-                ReleaseActionActive = true;
-                TouchLocation2 = Mouse.current.position.ReadValue();
-                Debug.Log(TouchLocation1 + "&" + TouchLocation2);
-            }
-            else
-            {
-                TouchLocation1 = Vector2.zero;
-                TouchLocation2 = Vector2.zero;
-                Debug.Log("Reset");
-                ReleaseActionActive = false;
-            }
+            TouchLocation1 = new Vector2(Input.mousePosition.x - 150, Input.mousePosition.y - 75);
+            TouchLocation2 = new Vector2(Input.mousePosition.x + 150, Input.mousePosition.y + 75);
+        }
+        else if (ReleaseActionActive && !Input.GetMouseButton(0))
+        {
+            TouchLocation1 = Vector2.zero;
+            TouchLocation2 = Vector2.zero;
+        }
+        else if (TouchLocation1 != Vector2.zero && TouchLocation2 != Vector2.zero && !Input.GetMouseButton(0))
+        {
+            ReleaseActionActive = true;
         }
     }
 }
