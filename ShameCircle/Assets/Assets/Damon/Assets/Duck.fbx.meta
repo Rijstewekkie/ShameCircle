@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 23121a4ad401e6c46b06a51d272089ec
+guid: cc6220977d33c134e946047cf8e99f00
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Birdo bod
-    second: {fileID: 2100000, guid: 33fb9f253e539394aaa32ca8b431f978, type: 2}
+      name: Eend
+    second: {fileID: 2100000, guid: d761f60d3cb705d49a3fef3633d816be, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tail feathers
-    second: {fileID: 2100000, guid: 3e175e72d2f2c554b9ac65d615e18201, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ogen
-    second: {fileID: 2100000, guid: 802c68923795370459500f71bed8ca95, type: 2}
+      name: Eyes
+    second: {fileID: 2100000, guid: 615c4b9aa26f6704f93e8f9dd05490fa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -106,11 +101,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
