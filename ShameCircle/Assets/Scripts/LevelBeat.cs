@@ -5,7 +5,7 @@ public class LevelBeatScript : MonoBehaviour
 {
     private GameManager gameManager;
     
-    public bool LevelBeat;
+    public static bool LevelBeat;
 
     void Start()
     {
@@ -19,6 +19,7 @@ public class LevelBeatScript : MonoBehaviour
             Debug.Log("Level Beat");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             LevelBeat = false;
+            Scenemanager.NextScene();
         }
     }
 }

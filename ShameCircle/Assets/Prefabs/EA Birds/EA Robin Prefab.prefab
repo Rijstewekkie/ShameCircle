@@ -342,6 +342,7 @@ MonoBehaviour:
   BirdType: 7
   Flying: 1
   Imposter: 0
+  RandomChance: 0
 --- !u!54 &-2424429370569155758
 Rigidbody:
   m_ObjectHideFlags: 0

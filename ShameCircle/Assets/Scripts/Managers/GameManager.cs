@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     private LevelBeatScript LevelBeat;
     private int currentLevel;
 
+    public static string ImposerCaught;
+
     public static BirdIdentityHolder SelectedBird;
     public static string SelectedBirdName;
     void Start()
@@ -21,14 +23,6 @@ public class GameManager : MonoBehaviour
         {
             SelectionScreen.SSelectionActive = true;
             Debug.Log("SelectedBird = " + SelectedBird);
-        }
-        if (SelectedBird.Imposter)
-        {
-            
-        }
-        else
-        {
-            Scoremanager.WrongGuesses++;
         }
     }
 }

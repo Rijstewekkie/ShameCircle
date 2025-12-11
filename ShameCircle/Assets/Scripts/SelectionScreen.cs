@@ -47,8 +47,7 @@ public class SelectionScreen : MonoBehaviour
 
             if (actualTouchRegister.TouchLocation1 != Vector2.zero)
             {
-                actualTouchRegister.TouchLocation1 = Vector2.zero;
-                SSelectionActive = false;
+                CloseMenu();
             }
         }
         else if (!SSelectionActive)
@@ -76,5 +75,29 @@ public class SelectionScreen : MonoBehaviour
 
         model = Instantiate(Models[(int)GameManager.SelectedBird.BirdType - 1] as GameObject, modelCube.transform);
         model.GetComponent<BirdIdentityHolder>().RandomChance = GameManager.SelectedBird.RandomChance;
+    }
+
+    void CloseMenu()
+    {
+        actualTouchRegister.TouchLocation1 = Vector2.zero;
+        SSelectionActive = false;
+
+        if (GameManager.SelectedBird.Imposter)
+        {
+            if (GameManager.ImposerCaught == null)
+            {
+                GameManager.ImposerCaught = GameManager.SelectedBird.BirdType.ToString();
+            }
+            else if (GameManager.ImposerCaught != GameManager.SelectedBird.BirdType.ToString())
+            {
+                GameManager.ImposerCaught = null;
+                LevelBeatScript.LevelBeat = true;
+            }
+        }
+        else
+        {
+            Scoremanager.WrongGuesses++;
+        }
+        Scenemanager.ReloadScene();
     }
 }
