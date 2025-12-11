@@ -1341,23 +1341,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.2981334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8754261
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.40821788
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.23456968
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.10938163
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1365,7 +1365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.928363
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3479071890692780043, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1385,7 +1385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6108368610151542050, guid: e71c0d02fddde02429def79dece92e8b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1411,7 +1411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3813632747780693201, guid: 0021fef9faca4274d83b475be6e1e986, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4911319045434796966, guid: 0021fef9faca4274d83b475be6e1e986, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
