@@ -62,22 +62,30 @@ public class TouchRegister : MonoBehaviour
     {
         if (Input.touchCount == 0)
         {
-            TouchLocation1 = Vector2.zero;
-            TouchLocation2 = Vector2.zero;
-        }
-        else if (Input.touchCount == 1)
-        {
-            if (TouchLocation1 != Vector2.zero && TouchLocation2 != Vector2.zero)
+            if (ReleaseActionActive || TouchLocation1 == Vector2.zero && TouchLocation2 == Vector2.zero)
+            {
+                ReleaseActionActive = false;
+                TouchLocation1 = Vector2.zero;
+                TouchLocation2 = Vector2.zero;
+            }
+            else if (TouchLocation1 != Vector2.zero && TouchLocation2 != Vector2.zero)
             {
                 ReleaseActionActive = true;
             }
-            else
+        }
+        else if (Input.touchCount == 1)
+        {
+            if (ReleaseActionActive || TouchLocation1 == Vector2.zero || TouchLocation2 == Vector2.zero)
             {
                 ReleaseActionActive = false;
+                TouchLocation1 = TouchInput1.position;
+                TouchLocation2 = Vector2.zero;
             }
-            TouchLocation1 = TouchInput1.position;
-            TouchLocation2 = Vector2.zero;
-            
+            else if (TouchLocation1 != Vector2.zero && TouchLocation2 != Vector2.zero)
+            {
+                ReleaseActionActive = true;
+            }
+
             Debug.Log(TouchLocation1);
         }
         else if (Input.touchCount > 1)
