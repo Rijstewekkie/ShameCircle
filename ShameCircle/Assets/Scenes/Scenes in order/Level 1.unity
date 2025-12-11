@@ -876,7 +876,7 @@ RectTransform:
   m_GameObject: {fileID: 783037713}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47957382, y: 0.28007, z: 1}
+  m_LocalScale: {x: 0.5249415, y: 0.40747386, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 133805106}
@@ -884,7 +884,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5999756, y: 45}
+  m_AnchoredPosition: {x: 0.5999756, y: 42.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &783037715
@@ -1308,6 +1308,10 @@ MonoBehaviour:
   TouchRegister: {fileID: 382441357}
   basicInfo: {fileID: 1054797077}
   extraInfo: {fileID: 31956934}
+  basicInfoArr: []
+  extraInfoArr: []
+  Models: []
+  modelCube: {fileID: 0}
 --- !u!1001 &1334257742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1948,9 +1952,33 @@ PrefabInstance:
       propertyPath: resettime
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 6212545100560646362, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212545100560646362, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212545100560646362, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880564923958184646, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880564923958184646, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880564923958184646, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 556
+      objectReference: {fileID: 0}
     - target: {fileID: 6880564923958184646, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -588
+      value: -285
       objectReference: {fileID: 0}
     - target: {fileID: 7930671255225727630, guid: 2a287a7f0c753ba49a1c046bfc41be7f, type: 3}
       propertyPath: resettime
