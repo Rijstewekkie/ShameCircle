@@ -158,7 +158,7 @@ PrefabInstance:
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: 'birdPrefabArray.Array.data[4]'
       value: 
-      objectReference: {fileID: 3577635906119584437, guid: 6662de4be5bb2a949b6fd0d20b00f9d5, type: 3}
+      objectReference: {fileID: 3898879311834636086, guid: d8c0b8ea205ac194a931c47e888db473, type: 3}
     - target: {fileID: 7447637041068758424, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: m_Name
       value: BirdSpawner

@@ -28,12 +28,17 @@ public class SelectionScreen : MonoBehaviour
     
     [SerializeField] GameObject juist;
     [SerializeField] GameObject fout;
+
+    private int totalTimer = 3;
+    private float activeTimer;
     void Update()
     {
         if (SSelectionActive)
         {
+            activeTimer -= Time.deltaTime;
             if (!selectionActiveDelay)
             {
+                activeTimer = totalTimer; 
                 runInfo();
                 actualTouchRegister = TouchRegister.GetComponent<TouchRegister>();
                 actualTouchRegister.TouchLocation1 = Vector2.zero;
@@ -65,10 +70,15 @@ public class SelectionScreen : MonoBehaviour
             
             selectionActiveDelay = true;
 
-            if (actualTouchRegister.TouchLocation1 != Vector2.zero)
+            if (actualTouchRegister.TouchLocation1 != Vector2.zero && activeTimer <= 0)
             {
+                actualTouchRegister.TouchLocation1 = Vector2.zero;
                 Debug.Log("Run close");
                 CloseMenu();
+            }
+            else if (actualTouchRegister.TouchLocation1 != Vector2.zero && activeTimer >= 0)
+            {
+                actualTouchRegister.TouchLocation1 = Vector2.zero;
             }
         }
         else if (!SSelectionActive)

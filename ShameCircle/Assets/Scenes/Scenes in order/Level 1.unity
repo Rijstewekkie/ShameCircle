@@ -499,7 +499,7 @@ PrefabInstance:
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: 'birdPrefabArray.Array.data[0]'
       value: 
-      objectReference: {fileID: 3577635906119584437, guid: 6662de4be5bb2a949b6fd0d20b00f9d5, type: 3}
+      objectReference: {fileID: 3898879311834636086, guid: d8c0b8ea205ac194a931c47e888db473, type: 3}
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: 'birdPrefabArray.Array.data[1]'
       value: 
@@ -511,7 +511,7 @@ PrefabInstance:
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: 'birdPrefabArray.Array.data[3]'
       value: 
-      objectReference: {fileID: 1320418581905400003, guid: f3f53ee522676f44bbcef28711261120, type: 3}
+      objectReference: {fileID: 999730462144495078, guid: 5f9bcd1267a965943beedbee121269c9, type: 3}
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: 'birdPrefabArray.Array.data[4]'
       value: 
