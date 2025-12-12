@@ -7,61 +7,6 @@
     <list default="true" id="0b46e06c-3b1d-4a86-b921-bc5387f666f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ShameCircle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Damon/Assets/Emu.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Damon/Assets/Emu.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Emu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Emu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Emu.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Emu.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Pigeon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Pigeon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Robin Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Robin Prefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Secretary Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA Secretary Prefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA cockatoe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA cockatoe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA snowy owl.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA snowy owl.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA woodpekker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EA Birds/EA woodpekker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Selection Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Selection Base.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TouchCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TouchCube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/Duck.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/Duck.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/Emu.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/Emu.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/Pigeon gameready.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/Pigeon gameready.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/UA Secretary Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/UA Secretary Prefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/UA Secretary Prefab.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/UA Secretary Prefab.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/cockatoe gameready.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/cockatoe gameready.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/snowy owl gameready.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/snowy owl gameready.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/woodpekker gameready.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UA Birds/woodpekker gameready.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/telefoon ui.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/telefoon ui.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin/BirdSelectorDEMO.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dev/Robin/BirdSelectorDEMO.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Intro.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Intro.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1 2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1 2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 4.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 4.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 5.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 5.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 6.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 6.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 7.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Level 7.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Main Menu.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Main Menu.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Main.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scenes in order/Main.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird Identity Holder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Scene manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Scene manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Score manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Score manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UI Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UI Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PictureScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PictureScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectionScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/bird/BirdSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/bird/BirdSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/bird/Birdmovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/bird/Birdmovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +161,7 @@
       <workItem from="1765494629242" duration="3710000" />
       <workItem from="1765499424417" duration="4311000" />
       <workItem from="1765509889205" duration="819000" />
+      <workItem from="1765532839153" duration="1762000" />
     </task>
     <servers />
   </component>
