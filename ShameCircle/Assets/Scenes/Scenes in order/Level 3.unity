@@ -1153,7 +1153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: birdSpawnRate
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1758003890756707512, guid: 9f5d86cbd91858944816cd190937d0f6, type: 3}
       propertyPath: floorIncrease
