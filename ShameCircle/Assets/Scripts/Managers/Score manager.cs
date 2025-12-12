@@ -17,6 +17,5 @@ public class Scoremanager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 }

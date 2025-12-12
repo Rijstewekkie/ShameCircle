@@ -24,7 +24,6 @@ public class SelectionScreen : MonoBehaviour
     private GameObject model;
     
     [SerializeField] GameObject modelCube;
-    
     void Update()
     {
         if (SSelectionActive)
@@ -48,6 +47,7 @@ public class SelectionScreen : MonoBehaviour
 
             if (actualTouchRegister.TouchLocation1 != Vector2.zero)
             {
+                Debug.Log("Run close");
                 CloseMenu();
             }
         }
@@ -71,7 +71,7 @@ public class SelectionScreen : MonoBehaviour
     void runInfo()
     {
         basicInfo.text = basicInfoArr[(int)GameManager.SelectedBird.BirdType - 1];
-        ;
+        
         extraInfo.text = extraInfoArr[(int)GameManager.SelectedBird.BirdType - 1];
 
         model = Instantiate(Models[(int)GameManager.SelectedBird.BirdType - 1] as GameObject, modelCube.transform);
@@ -80,17 +80,16 @@ public class SelectionScreen : MonoBehaviour
 
     void CloseMenu()
     {
-        actualTouchRegister.TouchLocation1 = Vector2.zero;
-        SSelectionActive = false;
-
         if (GameManager.SelectedBird.Imposter)
         {
             if (GameManager.ImposerCaught == null)
             {
                 GameManager.ImposerCaught = GameManager.SelectedBird.BirdType.ToString();
+                Debug.Log(GameManager.ImposerCaught);
             }
             else if (GameManager.ImposerCaught != GameManager.SelectedBird.BirdType.ToString())
             {
+                Debug.Log("Second Bird Found");
                 GameManager.ImposerCaught = null;
                 LevelBeatScript.LevelBeat = true;
             }
@@ -99,6 +98,11 @@ public class SelectionScreen : MonoBehaviour
         {
             Scoremanager.WrongGuesses++;
         }
+        
+        GameSpeedManager.sPauzeGame = false;
+        actualTouchRegister.TouchLocation1 = Vector2.zero;
+        SSelectionActive = false;
+        
         if(LevelBeatScript.LevelBeat)
         {
             Scenemanager.NextScene();

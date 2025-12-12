@@ -175,7 +175,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -295.4}
-  m_SizeDelta: {x: 1000, y: 50}
+  m_SizeDelta: {x: 1250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2668620241295196498
 CanvasRenderer:
@@ -745,18 +745,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionScreen: {fileID: 4047541265955825017}
   MainCamera: {fileID: 0}
+  UI: {fileID: 0}
   TouchRegister: {fileID: 0}
   basicInfo: {fileID: 3807098083243302754}
   extraInfo: {fileID: 3780919954155721899}
   basicInfoArr:
   - 'Naam: Wilde eend \n Lengte: 59 cm \n Gewicht: 1000 gram'
   - 'Naam: Houtduif \n Lengte: 40 cm \n Gewicht: 500 gram'
-  - 'Naam: Kaketoe \n Lengte: 30 cm \n Gewicht: 450 gram'
+  - 'Naam: Emoe \n Lengte: 150 cm \n Gewicht: 60.000 gram'
   - 'Naam: Secretarisvogel \n Lengte: 135 cm \n Gewicht: 3500 gram '
   - 'Naam: Sneeuwuil \n Lengte: 60 cm \n Gewicht: 1500 gram '
   - 'Naam: Grote bonte specht \n Lengte: 23 cm \n Gewicht: 100 gram '
   - 'Naam: roodborstje \n Lengte: 14 cm \n Gewicht: 18 gram '
-  - 'Naam: Emoe \n Lengte: 150 cm \n Gewicht: 60.000 gram'
+  - 'Naam: Kaketoe \n Lengte: 30 cm \n Gewicht: 450 gram'
   - 'Naam: Rock ptarmigan \n Lengte: 35 cm \n Gewicht: 550 gram '
   extraInfoArr:
   - 'Kaketoes hebben veel met papegaaien gemeen, het verschil licht bij hun mooie
@@ -769,13 +770,12 @@ MonoBehaviour:
   - 'Deze vogel heeft een witte stip in de nek en een witte band om hun vleugels,
     daardoor zijn ze van verre afstanden herkenbaar. Hun dieet bestaat uit: zaden,
     bessen, oogstresten en ander beschikbaar voedsel. '
-  - 'Kaketoes hebben veel met papegaaien gemeen, het verschil licht bij hun mooie
-    spectaculaire kuif en het feit dat kaketoes gemiddeld groter zijn dan papegaaien.
-    Ze hebben ook niet de regenboog veren van de papegaai. Tijdens angst, opwinding
-    en agressie staat de kuif overeind en soms heeft de kuif een andere kleur dan
-    het lichaam zoals een oranje kuif of een gele. Ze zijn speels en kunnen aan meerdere
-    personen gehecht raken. Hun dieet bestaat uit zaden, planten, noten, vruchten
-    en soms ook sprinkhanen maar die zijn niet hun prioriteit. '
+  - 'De vogel heeft zachte bruin veren, ze zijn sterk en kunnen vele kilometers door
+    rennen. Als het nodig is kunnen ze 48 km/h sprinten. Ze zijn omnivoren en hun
+    dieet bestaat uit verschillende soorten planten en insecten. Ze kunnen weken
+    zonder eten of drinken maar als ze de kans krijgen drinken ze enorm veel fris
+    water. Bij deze vogel zorgt de vader voor de eieren, tijdens deze periode eet
+    en drinkt de vader amper waardoor hij veel zal afvallen in deze periode. '
   - 'De vogel heeft lange sterke poten, een ruitvormige staart en een lange kuif
     van zwarte veren. Hun dieet bestaat uit slangen (die ze geheel inslikken), kleine
     zoogdieren, andere vogels en reptielen. Ze kunnen met moeite vliegen maar dat
@@ -796,25 +796,26 @@ MonoBehaviour:
     hebben. Tegen soort genoten zijn mannetjes en vrouwtjes zeer agressief, ze verdedigen
     hun territorium fel. Ze eten vooral grond levende insecten zoals kevers, wormen
     en spinnen. '
-  - 'De vogel heeft zachte bruin veren, ze zijn sterk en kunnen vele kilometers door
-    rennen. Als het nodig is kunnen ze 48 km/h sprinten. Ze zijn omnivoren en hun
-    dieet bestaat uit verschillende soorten planten en insecten. Ze kunnen weken
-    zonder eten of drinken maar als ze de kans krijgen drinken ze enorm veel fris
-    water. Bij deze vogel zorgt de vader voor de eieren, tijdens deze periode eet
-    en drinkt de vader amper waardoor hij veel zal afvallen in deze periode. '
   - 'Deze vogel is best zeldzaam hun veren zijn gemaakt voor camouflage voor elk
     seizoen. Hun veren worden wit in de winter tot bruin en grijs in de zomer en
     lente. Hun dieet verschild ook in hun leefomgeving. In koude tijden eten ze vaak
     kleine takjes zaden en bloemen. In warmere tijden eten ze veel bessen en bladeren. '
+  - 'Kaketoes hebben veel met papegaaien gemeen, het verschil licht bij hun mooie
+    spectaculaire kuif en het feit dat kaketoes gemiddeld groter zijn dan papegaaien.
+    Ze hebben ook niet de regenboog veren van de papegaai. Tijdens angst, opwinding
+    en agressie staat de kuif overeind en soms heeft de kuif een andere kleur dan
+    het lichaam zoals een oranje kuif of een gele. Ze zijn speels en kunnen aan meerdere
+    personen gehecht raken. Hun dieet bestaat uit zaden, planten, noten, vruchten
+    en soms ook sprinkhanen maar die zijn niet hun prioriteit. '
   Models:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1320418581905400003, guid: 4f8dd542ed79d4a46860ae090f3e5d16, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6328537798616180664, guid: 8ee21cb9b602e9c46b2ce58c6472c1e8, type: 3}
+  - {fileID: 5652051275778618370, guid: f594a1b0f5c5ced4a985f113db5e5fc9, type: 3}
+  - {fileID: 6393909049443500904, guid: ffabaeacd56b93a4c9a9ab200f7171d3, type: 3}
+  - {fileID: 1320418581905400003, guid: 253c27329158c674bb769bf9f99dbf0a, type: 3}
+  - {fileID: 3761701328859512627, guid: 2087d9d73ace9e34f97397ba8e7a12ed, type: 3}
+  - {fileID: 8360974461533551334, guid: ae04e2bfe51306947bc45a0fdd9557bd, type: 3}
   - {fileID: 3577635906119584437, guid: 442f413ab28ca564b901b72b6733ec67, type: 3}
-  - {fileID: 0}
+  - {fileID: 999730462144495078, guid: a021847db3d890541a8102fd67172234, type: 3}
   - {fileID: 0}
   modelCube: {fileID: 7239506371062067901}
 --- !u!1 &7239506371062067901

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Birdmovement : MonoBehaviour
 {
@@ -27,7 +28,14 @@ public class Birdmovement : MonoBehaviour
     void Start()
     {
         // eerste doelpunt iets voor de vogel
-        targetPos = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+        if (SceneManager.GetActiveScene().buildIndex != 2)
+        {
+            targetPos = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            targetPos = new Vector3(transform.position.x, transform.position.y, -transform.position.z);
+        }
         nextCourseChange = Time.time + Random.Range(1f, Coursechangeinterval);
         identityHolder = GetComponent<BirdIdentityHolder>();
         simpleMovement = true;

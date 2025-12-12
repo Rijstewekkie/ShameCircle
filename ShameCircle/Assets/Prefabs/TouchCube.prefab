@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Parent: {fileID: 0}
+  releaseAction: 0
   SelectedBird: {fileID: 0}
 --- !u!33 &3656166176300835802
 MeshFilter:

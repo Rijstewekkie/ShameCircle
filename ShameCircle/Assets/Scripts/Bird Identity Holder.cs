@@ -1,4 +1,6 @@
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdIdentityHolder : MonoBehaviour
 {
@@ -25,6 +27,10 @@ public class BirdIdentityHolder : MonoBehaviour
     private GameObject IgnoreAsset;
 
     public int RandomChance;
+
+    private int[] scene1Birds = { 1, 2, 7 };
+    private int[] scene2Birds = { 3, 4, 8 };
+    private int[] scene3Birds = { 6, 9, 5 };
     
     void Start()
     {
@@ -56,6 +62,19 @@ public class BirdIdentityHolder : MonoBehaviour
                     Debug.Log("easteregg popped");
                 }   
             }
+        }
+        
+        if (SceneManager.GetActiveScene().buildIndex == 1 && !scene1Birds.Contains((int)BirdType))
+        {
+            Imposter = true;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2 && !scene2Birds.Contains((int)BirdType))
+        {
+            Imposter = true;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3 && !scene3Birds.Contains((int)BirdType))
+        {
+            Imposter = true;
         }
     }
 }

@@ -15,7 +15,6 @@ public class UIManager : MonoBehaviour
         {
             SUIManager = this;
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update()

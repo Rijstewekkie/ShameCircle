@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.SceneManagement;
 public class BirdSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] birdPrefabArray;
@@ -20,6 +20,8 @@ public class BirdSpawner : MonoBehaviour
 
     [SerializeField] private float maxSpawnHeight;
     [SerializeField] private float minFlyHeight;
+    
+    [SerializeField] private float floorHeight;
 
     [SerializeField] private float birdSpawnDistance;
 
@@ -51,7 +53,7 @@ public class BirdSpawner : MonoBehaviour
 
         if (birdSizeDropoff == 0)
         {
-            birdSizeDropoff = .1f;
+            birdSizeDropoff = 0f;
         }
 
         if (birdSpeedDropoff == 0)
@@ -101,51 +103,119 @@ public class BirdSpawner : MonoBehaviour
             activeBirdMovementScript.birdDirection = true;
         }
 
-        if (!activeBirdMovementScript.birdDirection) //zet de vogel links/rechts neer
+        if (SceneManager.GetActiveScene().buildIndex != 2)
         {
-            activeBird.transform.position = new Vector3(birdSpawnDistance, activeBird.transform.position.y,
-                activeBird.transform.position.z);
-            activeBird.transform.rotation = Quaternion.Euler(0, 180, 0);
+            if (!activeBirdMovementScript.birdDirection) //zet de vogel links/rechts neer
+            {
+                activeBird.transform.position = new Vector3(birdSpawnDistance, activeBird.transform.position.y,
+                    activeBird.transform.position.z);
+                activeBird.transform.rotation = Quaternion.Euler(0, 180, 0);
 
-        }
-        else if (activeBirdMovementScript.birdDirection)
-        {
-            activeBird.transform.position = new Vector3(-birdSpawnDistance, activeBird.transform.position.y,
-                activeBird.transform.position.z);
-            activeBird.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (activeBirdMovementScript.birdDirection)
+            {
+                activeBird.transform.position = new Vector3(-birdSpawnDistance, activeBird.transform.position.y,
+                    activeBird.transform.position.z);
+                activeBird.transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        }
-        
+            }
 
-        activeBird.layer = LayerMask.NameToLayer("Bird Layer " + birdLocation); //zet de goede layer
-        foreach (Transform child in activeBird.transform.GetComponentsInChildren<Transform>())
-        {
-            child.gameObject.layer = LayerMask.NameToLayer("Bird Layer " + birdLocation); //zet de layer ook in children
-        }
 
-        activeBird.transform.localScale = new Vector3(birdSpawnSize.x - activeSizeDropoff,
-            birdSpawnSize.y - activeSizeDropoff, birdSpawnSize.z - activeSizeDropoff);
-        //zet de goede scale
+            activeBird.layer = LayerMask.NameToLayer("Bird Layer " + birdLocation); //zet de goede layer
+            foreach (Transform child in activeBird.transform.GetComponentsInChildren<Transform>())
+            {
+                child.gameObject.layer =
+                    LayerMask.NameToLayer("Bird Layer " + birdLocation); //zet de layer ook in children
+            }
 
-        if (activeBirdScript.Flying)
-        {
+            activeBird.transform.localScale = new Vector3(birdSpawnSize.x - activeSizeDropoff,
+                birdSpawnSize.y - activeSizeDropoff, birdSpawnSize.z - activeSizeDropoff);
+            //zet de goede scale
+
+            if (activeBirdScript.Flying)
+            {
+                activeBird.transform.position = new Vector3(activeBird.transform.position.x,
+                    Random.Range(minFlyHeight, maxSpawnHeight) + floorIncrease * (birdLocation + 1),
+                    activeBird.transform.position.z);
+                //laat vogel vliegen
+            }
+            else if (!activeBirdScript.Flying)
+            {
+                activeBird.transform.position = new Vector3(activeBird.transform.position.x,
+                    floorHeight, activeBird.transform.position.z);
+                //zet vogel op de grond
+            }
+
+            activeBirdMovementScript.Movespeed = birdMaxSpeed - (birdSpeedDropoff - birdLocation);
+            activeBirdMovementScript.Movespeed -= (birdSizeDropoff * birdLocation);
+
+            activeBirdMovementScript.spawnPos = activeBird.transform.position;
+
             activeBird.transform.position = new Vector3(activeBird.transform.position.x,
-                Random.Range(minFlyHeight, maxSpawnHeight) + floorIncrease * (birdLocation + 1),
-                activeBird.transform.position.z);
-            //laat vogel vliegen
+                activeBird.transform.position.y, -20 - 5 * birdLocation);
         }
-        else if (!activeBirdScript.Flying)
+        else
         {
-            activeBird.transform.position = new Vector3(activeBird.transform.position.x,
-                -maxSpawnHeight + floorIncrease * birdLocation, activeBird.transform.position.z);
-            //zet vogel op de grond
-        }
-        
-        activeBirdMovementScript.Movespeed = birdMaxSpeed - (birdSpeedDropoff - birdLocation);
-        activeBirdMovementScript.Movespeed -=  (birdSizeDropoff * birdLocation);
-        
-        activeBirdMovementScript.spawnPos = activeBird.transform.position;
-        
-        activeBird.transform.position = new Vector3(activeBird.transform.position.x, activeBird.transform.position.y, -20 - 5 * birdLocation);
+            // --- NEW Z AXIS LOGIC ---
+            if (!activeBirdMovementScript.birdDirection)
+            {
+                // Spawn positive Z
+                activeBird.transform.position = new Vector3(
+                    activeBird.transform.position.x,
+                    activeBird.transform.position.y,
+                    birdSpawnDistance
+                );
+                activeBird.transform.rotation = Quaternion.Euler(0, 90, 0);
+            }
+            else
+            {
+                // Spawn negative Z
+                activeBird.transform.position = new Vector3(
+                    activeBird.transform.position.x,
+                    activeBird.transform.position.y,
+                    -birdSpawnDistance
+                );
+                activeBird.transform.rotation = Quaternion.Euler(0, -90, 0);
+            }
+
+            activeBird.layer = LayerMask.NameToLayer("Bird Layer " + birdLocation);
+            foreach (Transform child in activeBird.transform.GetComponentsInChildren<Transform>())
+                child.gameObject.layer = LayerMask.NameToLayer("Bird Layer " + birdLocation);
+
+            activeBird.transform.localScale = new Vector3(
+                birdSpawnSize.x - activeSizeDropoff,
+                birdSpawnSize.y - activeSizeDropoff,
+                birdSpawnSize.z - activeSizeDropoff
+            );
+
+            if (activeBirdScript.Flying)
+            {
+                activeBird.transform.position = new Vector3(
+                    activeBird.transform.position.x,
+                    Random.Range(minFlyHeight, maxSpawnHeight) + floorIncrease * (birdLocation + 1),
+                    activeBird.transform.position.z
+                );
+            }
+            else
+            {
+                activeBird.transform.position = new Vector3(
+                    activeBird.transform.position.x,
+                    floorHeight,
+                    activeBird.transform.position.z
+                );
+            }
+
+            activeBirdMovementScript.Movespeed = birdMaxSpeed - (birdSpeedDropoff - birdLocation);
+            activeBirdMovementScript.Movespeed -= (birdSizeDropoff * birdLocation);
+
+            activeBirdMovementScript.spawnPos = activeBird.transform.position;
+
+            // Put bird somewhere on X depending on depth
+            activeBird.transform.position = new Vector3(
+                -20 - 5 * birdLocation,
+                activeBird.transform.position.y,
+                activeBird.transform.position.z
+            );
+        }   
     }
 }

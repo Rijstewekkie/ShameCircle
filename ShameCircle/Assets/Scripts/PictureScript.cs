@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DrawBoxController : MonoBehaviour
 {
@@ -25,8 +26,6 @@ public class DrawBoxController : MonoBehaviour
     private float rectY;
     private float rectWidth;
     private float rectHeight;
-
-    [SerializeField] private Camera screenshotCamera;
     
     //Collision Cube
     [SerializeField] GameObject CollisionCube;
@@ -125,7 +124,6 @@ public class DrawBoxController : MonoBehaviour
         rectY = boxMinY / Screen.height;
         rectWidth = boxWidth / Screen.width;
         rectHeight = boxHeight / Screen.height;
-        screenshotCamera.rect = new Rect(rectX, rectY, rectWidth, rectHeight);
         
         //Mix de canvas en "echte" wereld
         Vector3 screenCenter = new Vector3(boxCenter.x, boxCenter.y, collisionCubeDepth);
@@ -151,7 +149,14 @@ public class DrawBoxController : MonoBehaviour
         );
 
         //Placement (Daan, raak gras aan <3)
-        activeCollisionCube.transform.localScale = new Vector3(worldWidth, worldHeight, 100f);
+        if (SceneManager.GetActiveScene().buildIndex != 2)
+        {
+            activeCollisionCube.transform.localScale = new Vector3(worldWidth, worldHeight, 100f);
+        }
+        else
+        {
+            activeCollisionCube.transform.localScale = new Vector3(100f, worldHeight, worldWidth);
+        }
     }
 
     void ResetBoxCoords()
