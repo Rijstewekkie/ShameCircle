@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SelectionScreen : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class SelectionScreen : MonoBehaviour
     private GameObject model;
     
     [SerializeField] GameObject modelCube;
+    
+    [SerializeField] GameObject juist;
+    [SerializeField] GameObject fout;
     void Update()
     {
         if (SSelectionActive)
@@ -40,6 +44,22 @@ public class SelectionScreen : MonoBehaviour
             selectionScreen.SetActive(true);
             MainCamera.SetActive(false);
             UI.gameObject.SetActive(false);
+
+            if (GameManager.SelectedBird.Imposter)
+            {
+                juist.SetActive(true);
+                fout.SetActive(false);
+            }
+            else if (!GameManager.SelectedBird.Imposter)
+            {
+                juist.SetActive(false);
+                fout.SetActive(true);
+            }
+            else
+            {
+                juist.SetActive(false);
+                fout.SetActive(false);
+            }
             
             GameSpeedManager.sPauzeGame = true;
             
